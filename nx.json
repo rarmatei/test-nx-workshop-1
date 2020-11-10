@@ -6,9 +6,9 @@
       "dependencies": "*",
       "devDependencies": "*"
     },
-    "tsconfig.json": "*",
     "tslint.json": "*",
-    "nx.json": "*"
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
   },
   "projects": {
     "store": {
@@ -16,9 +16,7 @@
     },
     "store-e2e": {
       "tags": ["scope:store", "type:e2e"],
-      "implicitDependencies": [
-        "store"
-      ]
+      "implicitDependencies": ["store"]
     },
     "store-ui-shared": {
       "tags": ["scope:store", "type:ui"]
@@ -37,9 +35,21 @@
     },
     "store-ui-shared-e2e": {
       "tags": ["scope:store", "type:e2e"],
-      "implicitDependencies": [
-        "store-ui-shared"
-      ]
+      "implicitDependencies": ["store-ui-shared"]
+    },
+    "feature-price-formatters": {
+      "tags": ["type:feature'", "scope:none"]
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
   }
 }
