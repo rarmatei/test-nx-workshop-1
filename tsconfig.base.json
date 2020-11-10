@@ -26,6 +26,9 @@
       "@bg-hoard/util-interface": ["libs/util-interface/src/index.ts"],
       "@bg-hoard/feature-price-formatters": [
         "libs/feature-price-formatters/src/index.ts"
+      ],
+      "@bg-hoard/api/feature-price-formatters": [
+        "libs/api/feature-price-formatters/src/index.ts"
       ]
     }
   },

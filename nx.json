@@ -39,6 +39,9 @@
     },
     "feature-price-formatters": {
       "tags": ["type:feature'", "scope:none"]
+    },
+    "api-feature-price-formatters": {
+      "tags": ["type:feature'", "scope:api"]
     }
   },
   "tasksRunnerOptions": {

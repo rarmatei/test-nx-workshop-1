@@ -382,6 +382,39 @@
           "style": "scss"
         }
       }
+    },
+    "api-feature-price-formatters": {
+      "projectType": "library",
+      "root": "libs/api/feature-price-formatters",
+      "sourceRoot": "libs/api/feature-price-formatters/src",
+      "prefix": "bg-hoard",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/feature-price-formatters/tsconfig.lib.json",
+              "libs/api/feature-price-formatters/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api/feature-price-formatters/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api/feature-price-formatters/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
